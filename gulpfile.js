@@ -56,6 +56,16 @@ function watchTask() {
 	);
 }
 // webserv config
-
+gulp.task('publish', function (cb) {
+	buildBranch({
+		branch: 'build',
+		ignore: ['.git', '.token', 'www', 'node_modules']
+	}, function (err) {
+		if (err) {
+			throw err;
+		}
+		cb();
+	});
+});
 // Default Gulp Task
 exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
