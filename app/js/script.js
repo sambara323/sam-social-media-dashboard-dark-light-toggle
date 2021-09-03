@@ -13,16 +13,16 @@ const setTheme = () => {
 
 const checkMode = () => {
   if (localStorage.getItem("theme") == null) {
-    if (windows.matchMedia("(prefers-color-scheme: light)").matches) {
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
       lightButton.click();
-    } else if (windows.matchMedia("(prefers-color-scheme: dark)").matches) {
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       darkButton.click();
     }
   }
 };
 
 const checkModeChange = () => {
-  windows
+  window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", (e) => {
       checkMode();
