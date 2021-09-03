@@ -13,9 +13,9 @@ const setTheme = () => {
 
 const checkMode = () => {
   if (localStorage.getItem("theme") == null) {
-    if (windows.matchMedia("(prefers-color-scheme: light)").match) {
+    if (windows.matchMedia("(prefers-color-scheme: light)").matches) {
       lightButton.click();
-    } else if (windows.matchMedia("(prefers-color-scheme: dark)").match) {
+    } else if (windows.matchMedia("(prefers-color-scheme: dark)").matches) {
       darkButton.click();
     }
   }
