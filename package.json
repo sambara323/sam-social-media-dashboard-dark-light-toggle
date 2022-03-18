@@ -4,7 +4,7 @@
   "description": "![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "dependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.15.0",
     "autoprefixer": "^10.3.3",
     "axios": "^0.21.4",
